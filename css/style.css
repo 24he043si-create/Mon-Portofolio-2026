@@ -6,27 +6,27 @@
     --gris-tres-clair:#f8f8fb;
     --gris-clair:#eee;
        
-}
+} 
 
-{ margin: o;
+*{ margin: o;
   padding:o;
  box-sizing: border-box;
 }
-body{
+body {
     background-color: var(--gris-clair);
-font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-line-height: 1.6;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 1.6;
 }
-header{
-       background-color: white;
-       box-shadow: 2px 10px 10px rgba(0,0, 0, 0.5);
-       position: sticky;
-       top: 0;
-       z-index: 100;
-       display: flex;
-       justify-content: space-between;
-       align-items;center;
-       padding: 2rem 3rem;
+header {
+    background-color: white;
+    box-shadow: 2px 10px 10px rgba(0,0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items;center;
+    padding: 2rem 3rem;
 }
 header div a{
     text-decoration: none;
@@ -69,10 +69,10 @@ ul li a:hover::after {
     width: 100%;
 
 }
-a :active{
+a :active {
     color: var(--violet-fonce);
 }
-a :active{
+a :active {
     width: 100;
 }
 section.hero {
@@ -92,16 +92,18 @@ section.hero {
 }
 
 
-.hero h1{
+.Apropos div h2 {
     color: var(--violet-doux);
     font-size: 4rem;
     font-weight: 700;
     margin-bottom: 1.7rem;
+    text-align: center;
 }
-.hero p{
+.hero p {
     color: var(--gris-tres-fonce);
     font-size: 1.3rem;
     margin-bottom: 1.7rem;
+    text-align: center;
 }
 .hero a {
     text-decoration: none;
@@ -116,8 +118,36 @@ section.hero {
     margin-top: 1rem;
     transition: backgroud-color 0.3 ease,transform 0.2s ease;
 }
-.hero a:hover{
+.hero a:hover {
     background-color: var(--violet-fonce);
-    transform: translate(-3);
+    transform: translate(-3px);
     
 }
+.Apropos {
+    width: 800px;
+    margin: 6rem auto;
+    text-align: center;
+}
+section h2 {
+    color: var(--violet-doux);
+    font-size: 2.6rem;
+    font-weight: 700;
+    position: relative;
+    margin-bottom: 1.2rem;
+    text-align: center;
+}
+section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--violet-doux);
+    margin: 1.2rem auto;
+    border-radius: 2px;
+}
+section p{
+    margin-bottom: 2rem;
+    color: var(--gris-fonce);
+    font-size: 1.3rem;
+}
+
