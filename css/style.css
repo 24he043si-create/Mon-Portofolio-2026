@@ -13,10 +13,15 @@
     box-sizing: border-box;
 }
 
+html {
+    background-color: #fff;
+}
+
 body {
-    background-color: var(--gris-très-clair);
+    background-color: var(--gris-fond);
     font-family: roboto, sans-serif;
     line-height: 1.6;
+    background-color: #fff;
 }
 
 header {
@@ -82,13 +87,18 @@ a.active::after{
     width: 100%;
 }
 
+main {
+    background-color: #fff;
+}
+
 .hero{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5rem;
     text-align: center;
-    margin: 10rem;
+    margin-top: 10rem;
+    background-color: #fff;
 }
 
 .hero img {
@@ -106,7 +116,7 @@ a.active::after{
     margin-bottom: 1.2rem;
 }
 
-h.hero p {
+.hero p {
     color: var(--gris-très-fonce);
     font-size: 1.3rem;
     margin-bottom: 1.2rem;
@@ -176,12 +186,12 @@ section h2::after {
 
 .competences table thead {
     background-color: var(--violet-doux);
-    color: #FFF;
     text-transform: uppercase;
 }
 
 .competences table tbody td {
     border-bottom: 1px solid var(--gris-clair);
+    color: #050505;
 }
 
 .competences table tbody tr:nth-child(even) {
@@ -223,12 +233,6 @@ footer a {
 footer a:hover {
     color: var(--Orange-vif);
     transform: translateY(-3px);
-}
-
-:root {
-    --violet: #6c63ff;
-    --gris-fond: #f9f9f9;
-    --ombre: rgba(0, 0, 0, 0.1);
 }
 
 .projets-section {
@@ -316,4 +320,264 @@ footer a:hover {
 
 .links a:hover {
     color: var(--violet);
+}
+
+/* Conteneur principal */
+.contact-container {
+    display: flex;             /* Active le mode côte à côte */
+    justify-content: space-around; /* Espace les deux blocs */
+    align-items: flex-start;    /* Aligne le haut des blocs */
+    padding: 50px 10%;        /* Marge interne pour ne pas coller aux bords */
+    gap: 40px;                 /* Espace entre les deux colonnes */
+    flex-wrap: wrap;           /* Permet de passer l'un sous l'autre sur téléphone */
+}
+
+/* Style commun pour les deux colonnes */
+.contact-info, .contact-form {
+    flex: 1;                   /* Donne la même largeur aux deux colonnes */
+    min-width: 300px;          /* Largeur minimum avant de passer à la ligne */
+}
+
+/* Titres */
+h1, h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Style spécifique pour le formulaire (la boîte) */
+.contact-form {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+/* Boutons WhatsApp / Telegram côte à côte */
+.social-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn-whatsapp { background-color: #25D366; color: white; padding: 10px; border-radius: 5px; text-decoration: none; }
+.btn-telegram { background-color: #0088cc; color: white; padding: 10px; border-radius: 5px; text-decoration: none; }
+
+/* Style de la section Passions */
+.passions-header {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.passions-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Pour que les cartes passent à la ligne sur mobile */
+    gap: 30px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Centre le conteneur */
+}
+
+/* La carte individuelle */
+.passion-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease; /* Petit effet au survol */
+}
+
+.passion-card:hover {
+    transform: translateY(-10px); /* La carte monte un peu au survol */
+}
+
+.passion-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* L'image s'adapte sans se déformer */
+}
+
+.passion-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.passion-content h3 {
+    color: #3498db; /* Le bleu de ton portfolio */
+    margin-bottom: 10px;
+}
+
+.passion-content p {
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    background: url('https://images.unsplash.com/photo-1614850523296-e8c1d4715977?auto=format&fit=crop&w=1500&q=80') center/cover;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, #050505 20%, transparent 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 700px;
+}
+
+.badge {
+    background: linear-gradient(45deg, var(--primary), var(--accent));
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin: 1.5rem 0;
+    line-height: 1.1;
+}
+
+.hero-content h1 span {
+    background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-main {
+    padding: 1rem 2rem;
+    background: var(--text-white);
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-main:hover {
+    transform: scale(1.05);
+    background: var(--primary);
+    color: white;
+}
+
+.btn-outline {
+    padding: 1rem 2rem;
+    background: transparent;
+    border: 1px solid var(--text-white);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* --- Section Grille --- */
+.trending {
+    padding: 4rem 10%;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.4s ease;
+    border: 1px solid var(--glass);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary);
+    box-shadow: 0 15px 30px rgba(131, 58, 180, 0.2);
+}
+
+.card-img {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 15px;
+}
+
+.category {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-body h3 { margin-bottom: 0.5rem; }
+.card-body p { color: var(--text-dim); font-size: 0.9rem; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-content h1 { font-size: 2.5rem; }
+    .nav-links { display: none; }
+}
+
+
+
+
+/* Style spécifique pour la page divertissement */
+.divertissement-section {
+    padding: 60px 10%;
+    text-align: center;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* Fond légèrement dégradé */
+    min-height: 80vh;
+}
+
+/* On réutilise la grille de la page projets pour garder la cohérence */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+/* On personnalise les badges pour le fun */
+.divertissement-section .tags span {
+    background: #ff6b6b; /* Un rouge orangé pour changer du violet */
+    color: white;
+}
+
+/* Effet de lueur sur les cartes au survol */
+.divertissement-section .project-card:hover {
+    box-shadow: 0 15px 35px rgba(255, 107, 107, 0.2);
+    transform: scale(1.03);
+}
+
+.divertissement-section h3 {
+    color: #2d3436;
 }
